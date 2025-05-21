@@ -8,15 +8,17 @@ interface IToDoCard {
   onCheck: () => void;
   onHover: () => void;
   onDelete: () => void;
+  onLeave: () => void;
 }
 
 export const TodoCard = (props: IToDoCard) => {
-  const { text, done, onCheck, onHover, onDelete } = props;
+  const { text, done, onCheck, onHover, onDelete, onLeave } = props;
 
   return (
     <Card
       tabIndex={0}
-      onFocus={onHover}
+      onMouseEnter={onHover}
+      onMouseLeave={onLeave}
       onClick={onCheck}
       className={clsx(styles.card, done && styles.cardDone)}
       onContextMenu={(e) => {

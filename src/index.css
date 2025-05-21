@@ -6,3 +6,19 @@ body {
   height: 100%;
   box-sizing: border-box;
 }
+
+.responsive-actions {
+  flex-wrap: wrap;
+  row-gap: 1rem;
+}
+
+@media (max-width: 640px) {
+  .responsive-actions {
+    flex-direction: column !important;
+    align-items: stretch;
+  }
+
+  .responsive-actions > * {
+    width: 100%;
+  }
+}

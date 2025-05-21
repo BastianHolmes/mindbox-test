@@ -21,6 +21,7 @@ export const TodoList: React.FC<TodoListProps> = React.memo(
             done={todo.done}
             onCheck={() => onCheck(todo.id)}
             onHover={() => onHover(todo.id)}
+            onLeave={() => onHover("")}
             onDelete={() => onDelete(todo.id)}
           />
         ))}

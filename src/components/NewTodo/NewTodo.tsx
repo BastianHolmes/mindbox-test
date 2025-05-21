@@ -36,7 +36,7 @@ export const AddNewTodo = (props: INewTodo) => {
   return (
     <TextField.Root
       ref={inputRef}
-      style={{ width: "50%" }}
+      style={{ width: "100%" }}
       size="3"
       placeholder="Write something to do"
       radius="small"

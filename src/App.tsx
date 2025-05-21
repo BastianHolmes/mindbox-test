@@ -72,7 +72,13 @@ function App() {
       </Heading>
 
       <Flex direction="column" gap="4" p="6">
-        <Flex direction="row" gap="3" align="center" justify="between">
+        <Flex
+          direction="row"
+          gap="3"
+          align="center"
+          justify="between"
+          className="responsive-actions"
+        >
           <AddNewTodo onAddTodo={handleAddTodo} />
           <Actions filter={filter} setFilter={setFilter} />
         </Flex>

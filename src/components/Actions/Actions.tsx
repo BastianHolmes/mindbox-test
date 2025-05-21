@@ -12,8 +12,7 @@ interface IFilters {
 export const Actions = (props: IFilters) => {
   const { filter, setFilter } = props;
   return (
-    <Flex gap="2">
-      <HotkeyHint />
+    <Flex gap="2" align={"end"}>
       <FilterBtn
         filter={filter}
         onFilter={() => setFilter("all")}
@@ -32,6 +31,7 @@ export const Actions = (props: IFilters) => {
         target="done"
         text="Done"
       />
+      <HotkeyHint />
     </Flex>
   );
 };
