@@ -1,0 +1,55 @@
+.container {
+  padding: 2rem;
+}
+
+.card {
+  cursor: pointer;
+  background-color: white;
+  transition: all 0.4s ease;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes mintGlow {
+  0%,
+  100% {
+    box-shadow: 0 0 20px 4px rgba(0, 255, 204, 0.15),
+      0 0 40px 12px rgba(0, 255, 204, 0.1), 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 24px 6px rgba(0, 255, 204, 0.2),
+      0 0 48px 16px rgba(0, 255, 204, 0.15), 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+}
+
+.card:hover {
+  animation: mintGlow 1.8s ease-in-out infinite;
+}
+
+.cardDone {
+  background-color: #f0fff4;
+  opacity: 0.7;
+  box-shadow: none;
+}
+
+.lineAnimated {
+  position: relative;
+  color: #777;
+}
+
+.lineAnimated::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  background: currentColor;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.lineAnimatedActive::after {
+  transform: scaleX(1);
+}
