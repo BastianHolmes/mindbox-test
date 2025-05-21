@@ -9,7 +9,11 @@ interface IFilterBtn {
 export const FilterBtn = (props: IFilterBtn) => {
   const { filter, target, onFilter, text } = props;
   return (
-    <Button variant={filter === target ? "solid" : "soft"} onClick={onFilter}>
+    <Button
+      variant={filter === target ? "solid" : "soft"}
+      style={{ cursor: "pointer" }}
+      onClick={onFilter}
+    >
       {text}
     </Button>
   );

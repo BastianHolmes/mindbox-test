@@ -1,17 +1,16 @@
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Container, Flex, Heading } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
-
 import "./index.css";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Filter, Todo } from "./types";
 
-import { useMoveTodos } from "./utils/useMoveTodos";
 import { Actions, AddNewTodo, TodoList } from "./components";
 import {
   loadFromLocalStorage,
   saveToLocalStorage,
-} from "./utils/localstorageFns";
+  useMoveTodos,
+} from "./utils";
 
 const LOCAL_STORAGE_KEY = "todos";
 

@@ -27,7 +27,12 @@ export const HotkeyHint = () => {
   return (
     <HoverCard.Root>
       <HoverCard.Trigger>
-        <IconButton variant="outline" size="2" aria-label="Hotkeys help">
+        <IconButton
+          variant="outline"
+          size="2"
+          style={{ cursor: "pointer" }}
+          aria-label="Hotkeys help"
+        >
           ?
         </IconButton>
       </HoverCard.Trigger>
